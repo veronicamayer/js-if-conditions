@@ -1,0 +1,122 @@
+section {
+    border-bottom: 10px solid rgb(255, 240, 242);
+}
+
+datalist {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+option {
+    padding: 0;
+}
+
+input[type="range"] {
+    width: 30vw;
+    margin: 0;
+}
+
+#airQualitySection {
+    transition: background-color 1s;
+}
+
+input[type="number"] {
+    width: 5vw;
+    margin: 0;
+}
+
+#colorSection {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+
+    article {
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 20px;
+        width: 40vw;
+        text-align: center;
+        padding: 5vh 0;
+        margin: 0 auto;
+
+        input {
+            width: 30vw;
+            text-align: center;
+        }
+
+        h3 {
+            font-weight: 400;
+        }
+
+        button {
+            border: none;
+            width: 30vw;
+        }
+    }
+}
+
+button {
+    background-color: #69f23b;
+}
+
+#switchBgSection {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    article {
+        margin: 7vh auto;
+        display: flex;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 2vw;
+        border: 1px solid black;
+    }
+
+    div:hover {
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    #greenPurple {
+        background: linear-gradient(45deg, #298f53 50%, #6e0960 50%);
+    }
+
+    #blueYellow {
+        background: linear-gradient(45deg, #444170 50%, #d9ab42 50%);
+    }
+
+    #blackOrange {
+        background: linear-gradient(45deg, #010120 50%, #c65d0b 50%);
+    }
+
+    #darkBlueLightBlue {
+        background: linear-gradient(45deg, #070658 50%, #46ccfe 50%);
+    }
+}
+
+#fontGenerator {
+    background-color: #2c2c46;
+    height: 70vh;
+    max-height: 70vh;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    article { 
+        background-color: white;
+        width: 50vw;
+        padding: 2vh 0 5vh 0;
+        margin: auto;
+    }
+
+    form input[type="range"] {
+        width: 10vw;
+    }
+}
