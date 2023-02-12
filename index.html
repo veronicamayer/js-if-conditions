@@ -1,109 +1,170 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Title</title>
-</head>
-<body>
-    <!-- Aufgabe 1 -->
-    <section>
-        <form onsubmit="return false">
-            <input type="range" name="weather" id="weatherQuality" min="0" max="10" value="0" list="markersWeather">
-            <datalist id="markersWeather">
-                <option value="0" label="0"></option>
-                <option value="1" label="1"></option>
-                <option value="2" label="2"></option>
-                <option value="3" label="3"></option>
-                <option value="4" label="4"></option>
-                <option value="5" label="5"></option>
-                <option value="6" label="6"></option>
-                <option value="7" label="7"></option>
-                <option value="8" label="8"></option>
-                <option value="9" label="9"></option>
-                <option value="10" label="10"></option>
-            </datalist>
-        </form>
-
-        <p>Wetter Qualität: </p>
-    </section>
-
-    <!-- Aufgabe 2 -->
-    <section>
-        <article>
-            <h4>Punkte = Alter*5 + Größe</h4>
-            <p>John: <span id="größeJ">170</span> cm, <span id="alterJ">22</span> Jahre alt, <span id="punkteJ"></span> Punkte.</p>
-            <p>Meike: <span id="größeM">168</span> cm, <span id="alterM">34</span> Jahre alt, <span id="punkteM"></span> Punkte.</p>
-            <h4 id="ergebnis">Der Gewinner ist: </h4>
-        </article>
-    </section>
-
-    <!-- Aufgabe 3 -->
-    <section id="airQualitySection">
-        <p id="aqi">AQI:</p>
-        <form onsubmit="return false">
-            <input type="range" name="airQuality" id="airQuality" min="0" max="150" value="0" list="markersAir">
-            <datalist id="markersAir">
-                <option value="0" label="0"></option>
-                <option value="50" label="50"></option>
-                <option value="100" label="100"></option>
-                <option value="150" label="150"></option>
-            </datalist>
-        </form>
-
-        <h4 id="healthConcern">Level of health concern: </h4>
-        <h4 id="healthEffect">Level of health effect: </h4>
-    </section>
-
-    <!-- Aufgabe 4 -->
-    <section>
-        <p><input type="number" name="zahl" id="zahlInput" placeholder="30"> ist <span id="vergleichSpan"></span> 27.</p>
-        <p>Die Differenz ist <span class="differenzSpan"></span></p>
-        <p id="doppeltText">Das doppelte von <span class="differenzSpan"></span> ist <span id="doppeltSpan"></span>.</p>
-    </section>
-
-    <!-- Aufgabe 5 -->
-    <section id="colorSection">
-        <article id="colorArticle">
-            <input type="text" id="colorId" placeholder="RGB or HEX value">
-            <h3>Give me a Color!</h3>
-            <button onclick="changeColor()">Senden</button>
-        </article>
-    </section>
-
-    <!-- Aufgabe 6 -->
-    <section id="switchBgSection">
-        <h1>CHANGE BACKGROUND & TEXT COLOR</h1>
-        <article>
-            <div id="greenPurple" onclick="switchColors('#298f53', '#6e0960')"></div>
-            <div id="blueYellow" onclick="switchColors('#444170', '#d9ab42')"></div>
-            <div id="blackOrange" onclick="switchColors('#010120', '#c65d0b')"></div>
-            <div id="darkBlueLightBlue" onclick="switchColors('#070658', '#46ccfe')"></div>
-        </article>
-    </section>
-
-    <!-- Aufgabe 7 -->
-    <section id="fontGenerator">
-        <article>
-            <h3>Font Generator</h3>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- Aufgabe 1 -->
+        <section>
             <form onsubmit="return false">
-                <input type="range" min="1" max="5" value="1" id="fontSize">
-                <label for="fontSize">Font size</label>
-                <select name="fontFamily" id="fontFamily">
-                    <option value="'Courier New'">Courier New</option>
-                    <option value="'Arial'">Arial</option>
-                    <option value="'Gill Sans'">Gill Sans</option>
-                    <option value="'Lucida Sans'">Lucida Sans</option>
-                </select>
-                <input type="text" name="text" id="text" placeholder="type something">
+                <input
+                    type="range"
+                    name="weather"
+                    id="weatherQuality"
+                    min="0"
+                    max="10"
+                    value="0"
+                    list="markersWeather"
+                />
+                <datalist id="markersWeather">
+                    <option value="0" label="0"></option>
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                    <option value="6" label="6"></option>
+                    <option value="7" label="7"></option>
+                    <option value="8" label="8"></option>
+                    <option value="9" label="9"></option>
+                    <option value="10" label="10"></option>
+                </datalist>
             </form>
-            <p id="textResult">see your text here</p>
-        </article>
-    </section>
-    
 
-    <script src="./assets/js/main.js"></script>
-</body>
+            <p>Wetter Qualität:</p>
+        </section>
+
+        <!-- Aufgabe 2 -->
+        <section>
+            <article>
+                <h4>Punkte = Alter*5 + Größe</h4>
+                <p>
+                    John: <span id="größeJ">170</span> cm,
+                    <span id="alterJ">22</span> Jahre alt,
+                    <span id="punkteJ"></span> Punkte.
+                </p>
+                <p>
+                    Meike: <span id="größeM">168</span> cm,
+                    <span id="alterM">34</span> Jahre alt,
+                    <span id="punkteM"></span> Punkte.
+                </p>
+                <h4 id="ergebnis">Der Gewinner ist:</h4>
+            </article>
+        </section>
+
+        <!-- Aufgabe 3 -->
+        <section id="airQualitySection">
+            <p id="aqi">AQI:</p>
+            <form onsubmit="return false">
+                <input
+                    type="range"
+                    name="airQuality"
+                    id="airQuality"
+                    min="0"
+                    max="150"
+                    value="0"
+                    list="markersAir"
+                />
+                <datalist id="markersAir">
+                    <option value="0" label="0"></option>
+                    <option value="50" label="50"></option>
+                    <option value="100" label="100"></option>
+                    <option value="150" label="150"></option>
+                </datalist>
+            </form>
+
+            <h4 id="healthConcern">Level of health concern:</h4>
+            <h4 id="healthEffect">Level of health effect:</h4>
+        </section>
+
+        <!-- Aufgabe 4 -->
+        <section>
+            <p>
+                <input
+                    type="number"
+                    name="zahl"
+                    id="zahlInput"
+                    placeholder="30"
+                />
+                ist <span id="vergleichSpan"></span> 27.
+            </p>
+            <p>Die Differenz ist <span class="differenzSpan"></span></p>
+            <p id="doppeltText">
+                Das doppelte von <span class="differenzSpan"></span> ist
+                <span id="doppeltSpan"></span>.
+            </p>
+        </section>
+
+        <!-- Aufgabe 5 -->
+        <section id="colorSection">
+            <article id="colorArticle">
+                <input
+                    type="text"
+                    id="colorId"
+                    placeholder="RGB or HEX value"
+                />
+                <h3>Give me a Color!</h3>
+                <button onclick="changeColor()">Senden</button>
+            </article>
+        </section>
+
+        <!-- Aufgabe 6 -->
+        <section id="switchBgSection">
+            <h1>CHANGE BACKGROUND & TEXT COLOR</h1>
+            <article>
+                <div
+                    id="greenPurple"
+                    onclick="switchColors('#298f53', '#6e0960')"
+                ></div>
+                <div
+                    id="blueYellow"
+                    onclick="switchColors('#444170', '#d9ab42')"
+                ></div>
+                <div
+                    id="blackOrange"
+                    onclick="switchColors('#010120', '#c65d0b')"
+                ></div>
+                <div
+                    id="darkBlueLightBlue"
+                    onclick="switchColors('#070658', '#46ccfe')"
+                ></div>
+            </article>
+        </section>
+
+        <!-- Aufgabe 7 -->
+        <section id="fontGenerator">
+            <article>
+                <h3>Font Generator</h3>
+                <form onsubmit="return false">
+                    <input
+                        type="range"
+                        min="1"
+                        max="5"
+                        value="1"
+                        id="fontSize"
+                    />
+                    <label for="fontSize">Font size</label>
+                    <select name="fontFamily" id="fontFamily">
+                        <option value="'Courier New'">Courier New</option>
+                        <option value="'Arial'">Arial</option>
+                        <option value="'Gill Sans'">Gill Sans</option>
+                        <option value="'Lucida Sans'">Lucida Sans</option>
+                    </select>
+                    <input
+                        type="text"
+                        name="text"
+                        id="text"
+                        placeholder="type something"
+                    />
+                </form>
+                <p id="textResult">see your text here</p>
+            </article>
+        </section>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
